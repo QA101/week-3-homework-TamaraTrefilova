@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class PigGame {
 		System.out.println("Game is over");
 		printScores(arr);
 		System.out.println("Do you want to play again? Print \"yes\" or  \"y\"");
-		String answer = scanner.nextLine();
+		String answer = scanner.next();
 		if (!answer.toLowerCase().equals("yes") || !answer.toLowerCase().equals("y")) {
 			return false;
 		}
@@ -88,9 +88,9 @@ public class PigGame {
 				if(! resetTheGame(arr, turn, scanner))
 					break end;
 			}
-
 		}
 		System.out.println("Exit the game");
+		scanner.close();
 
 	}
 
